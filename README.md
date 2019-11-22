@@ -75,3 +75,22 @@ fatal: [localhost]: FAILED! => {"msg": "Unexpected failure during module executi
 ```
 
 Solution: `pip install --user -r roles/validation-role/requirements.txt`
+
+### TODO
+
+- Add custom regexes:
+
+```
+validation_regexes:
+- name: betweenOneAndHundred
+  regex: "^([1-9]\d?|100)$"
+```
+
+- Add conditions:
+
+```
+<role>_validations:
+- path: machine.host
+  match: ipv4
+  when: <condition>
+```
