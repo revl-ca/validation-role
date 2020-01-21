@@ -1,2 +1,2 @@
 jmespath==0.9.3
-validators==0.12.2
+validators==0.12.6
